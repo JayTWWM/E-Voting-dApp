@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./src/css/pie.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://static.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://static.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="./src/js/pie.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <!--Navigation-->
+    <header id="header">
+        <nav class="links" style="--items: 5;">
+            <a href="./Results.html">Results</a>
+            <a href="./VoterVerification1.html">Voter Image Verification</a>
+            <a href="./VoterVerification2.html">Voter Adhaar Verification</a>
+            <a href="./VotingPortal.html">Voting Portal</a>
+            <a href="./AdminVerification1.html">Admin Portal</a>
+            <span class="line"></span>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+        <button onclick="getPartyCount()" id="button1" class="button1">PrepareResults</button>
+        <button onclick="getData()" id="button2" class="button1">Load Results</button>
+        <button onclick="loadChart()" id="button3" class="button1">Show Results</button>
+        <div id="container" class="container" style="margin: 50px;"></div>
+    </center>
+</body>
+
+</html>

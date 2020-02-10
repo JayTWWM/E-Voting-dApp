@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register Party</title>
+    <link rel="stylesheet" href="./src/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/select.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="./src/js/app.js" type="text/javascript"></script>
+</head>
+
+<body style="background-color: #993CF3;">
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <div id="google_translate_element" style="background-color: #fff;width: 200px;text-align: center;"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Register Party</h2>
+                        <form class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" id="partyName" placeholder="Your Party Name" />
+                            </div>
+                            <div class="form-group form-button">
+                                <input onclick="createParty()" class="form-submit" value="Register" readonly/>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <figure><img src="./src/images/ashok.png" width="250" alt="sign up image"></figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
