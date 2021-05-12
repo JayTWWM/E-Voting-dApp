@@ -21,12 +21,12 @@
     "nodemon": "^1.17.3",
     "truffle": "5.0.2",
     "truffle-contract": "3.0.6",
-    "nodemailer": "^6.4.2"
+    "nodemailer": "^6.4.16"
   },
   "dependencies": {
     "clientside-require": "^4.7.2",
     "jquery": "^3.4.1",
     "node-run-cmd": "^1.0.1",
-    "nodemailer": "^6.4.2"
+    "nodemailer": "^6.4.16"
   }
 }
