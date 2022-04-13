@@ -91,7 +91,7 @@ code {
 /* Appearance */
 
 .links {
-    background-color: #FF4105;
+    background-color: #34663d;
     background-image: linear-gradient(to bottom, #0003, transparent);
     border-bottom: 1px solid #0003;
     box-shadow: 0 0 32px #0003;
@@ -100,7 +100,7 @@ code {
 }
 
 .links>a {
-    color: #1b1b1b;
+    color: #ffffff;
     padding: .75em;
     text-align: center;
     text-decoration: none;
