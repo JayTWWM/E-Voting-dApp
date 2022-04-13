@@ -25,7 +25,7 @@ figure {
 }
 .form-submit {
     display: inline-block;
-    background: $blue-color;
+    background: #34663d;
     color: #fff;
     border-bottom: none;
     width: auto;
@@ -34,7 +34,7 @@ figure {
     margin-top: 25px;
     cursor: pointer;
     &:hover {
-        background: darken($blue-color, 10%);
+        background: #41804d;
     }
 }
 

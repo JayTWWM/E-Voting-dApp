@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./src/fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/select.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -17,7 +18,7 @@
     <script src="./src/js/app.js" type="text/javascript"></script>
 </head>
 
-<body style="background-color: #993CF3;">
+<body style="background-color: #f5c242;">
     <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <div id="google_translate_element" style="background-color: #fff;width: 200px;text-align: center;"></div>
@@ -29,10 +30,23 @@
             }, 'google_translate_element');
         }
     </script>
+    <header id="header">
+        <nav class="links" style="--items: 5;">
+            <a href="./VotingPortal.html">Voting Portal</a>
+            <a href="./VoterVerification1.html">Voter Image Verification</a>
+            <a href="./VoterVerification2.html">Voter Account Verification</a>
+            <a href="./PartyRegistration.html">Party Registration</a>
+            <a href="./Results.html">Results</a>
+            <span class="line"></span>
+        </nav>
+    </header>
+    <header id="header-blankspace" style="height:20vh;">
+        <div></div>
+    </header>
     <div class="main">
         <section class="signup">
-            <div class="container">
-                <div class="signup-content">
+            <div class="container" >
+                <div class="signup-content" style="margin:auto; width:70%;margin-left:170px;margin-top:50px;">
                     <div class="signup-form">
                         <h2 class="form-title">Register Party</h2>
                         <form class="register-form" id="register-form">
@@ -44,9 +58,6 @@
                                 <input onclick="createParty()" class="form-submit" value="Register" readonly/>
                             </div>
                         </form>
-                    </div>
-                    <div>
-                        <figure><img src="./src/images/ashok.png" width="250" alt="sign up image"></figure>
                     </div>
                 </div>
             </div>

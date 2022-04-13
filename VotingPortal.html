@@ -36,21 +36,19 @@
             <a href="./VotingPortal.html">Voting Portal</a>
             <a href="./VoterVerification1.html">Voter Image Verification</a>
             <a href="./VoterVerification2.html">Voter Account Verification</a>
-            <a href="./AdminVerification1.html">Admin Portal</a>
+            <a href="./PartyRegistration.html">Party Registration</a>
             <a href="./Results.html">Results</a>
             <span class="line"></span>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <header id="header-blankspace" style="height:20vh;">
+        <div></div>
+    </header>
     <div class="main">
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
-                    <div class="signup-form">
+                    <div class="signup-form" style="margin:auto; width:70%;margin-left:170px;">
                         <h2 class="form-title">Voting Portal</h2>
                         <div class="register-form">
                             <div class="form-group">
@@ -58,18 +56,13 @@
                                 <input type="text" id="adhaarNumber" placeholder="Your Account Number" />
                             </div>
                             <div class="box">
-                                <select id="partyNamed">
-                                </select>
+                                <select id="partyNamed"></select>
                             </div>
                         </div>
                         <div class="form-group form-button" style="margin-top: 150px;">
                             <button onclick="getDropper()" class="form-submit">Ready</button>
                             <input onclick="generateNewVote()" class="form-submit" value="Vote" readonly/>
                         </div>
-                    </div>
-                    <div>
-                        <figure><img src="./src/images/signup-image.jfif" width="250" alt="sign up image"></figure>
-
                     </div>
                 </div>
             </div>

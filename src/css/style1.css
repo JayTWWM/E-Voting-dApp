@@ -30,14 +30,14 @@ input[name="image-upload"] {
 button.button1 {
     margin: 10px;
     padding: 0.35em 1.2em;
-    border: 0.1em solid #ff4800;
+    border: 0.1em solid #34663d;
     border-radius: 0.12em;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 2em;
-    color: #ff4800;
+    color: #34663d;
     text-align: center;
     transition: all 0.2s;
 }
