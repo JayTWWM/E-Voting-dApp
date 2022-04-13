@@ -378,13 +378,14 @@ figure {
 
 .form-submit {
     display: inline-block;
-    background: #6dabe4;
+    background: #34663d;
     color: #fff;
     border-bottom: none;
     width: 200px;
     height: 55px;
     padding: 15px 39px;
     border-radius: 5px;
+    text-align: center;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     -o-border-radius: 5px;
@@ -395,7 +396,7 @@ figure {
 }
 
 .form-submit:hover {
-    background: #4292dc;
+    background: #41804d;
 }
 
 #signin {
@@ -669,7 +670,7 @@ label.valid:after {
 }
 
 .zmdi-google {
-    background: #e72734;
+    background: #34663d;
 }
 
 .signin-form {
@@ -775,14 +776,14 @@ label.valid:after {
 button.button1 {
     margin: 10px;
     padding: 0.35em 1.2em;
-    border: 0.1em solid #ff4800;
+    border: 0.1em solid #34663d;
     border-radius: 0.12em;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 2em;
-    color: #ff4800;
+    color: #34663d;
     text-align: center;
     transition: all 0.2s;
 }

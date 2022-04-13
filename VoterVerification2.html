@@ -33,19 +33,17 @@
     <!--Navigation-->
     <header id="header">
         <nav class="links" style="--items: 5;">
-            <a href="./VoterVerification2.html">Voter Adhaar Verification</a>
+            <a href="./VoterVerification2.html">Voter Account Verification</a>
             <a href="./VoterVerification1.html">Voter Image Verification</a>
+            <a href="./PartyRegistration.html">Party Registration</a>
             <a href="./VotingPortal.html">Voting Portal</a>
-            <a href="./AdminVerification1.html">Admin Portal</a>
             <a href="./Results.html">Results</a>
             <span class="line"></span>
         </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <header id="header-blankspace" style="height:20vh;">
+        <div></div>
+    </header>
     <div class="main">
         <section class="signup">
             <div class="container1">
@@ -55,21 +53,15 @@
                         <form class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="adhaarNumber" placeholder="Your Adhaar Number / आपका आधार नंबर" />
+                                <input type="text" id="adhaarNumber" placeholder="Your Account Number" />
                             </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="email" placeholder="Your Email Id / आपकी ईमेल आईडी" />
+                                <input type="text" id="email" placeholder="Your Email" />
                             </div>
                             <div class="form-group form-button">
-                                <input onclick="verify()" class="form-submit" value="Verify / सत्यापित करें" readonly/>
-                            </div>
-                            <!-- <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="otp" placeholder="OTP / ओटीपी"/>
-                            </div> -->
-                            <div class="form-group form-button">
-                                <input onclick="loadVote()" class="form-submit" value="Register / रजिस्टर करें" readonly/>
+                                <input onclick="verify()" class="form-submit" value="Verify" readonly/>
+                                <input onclick="loadVote()" class="form-submit" value="Register" readonly/>
                             </div>
                         </form>
                     </div>
