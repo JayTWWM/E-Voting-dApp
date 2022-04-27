@@ -86,7 +86,6 @@ function getPartyCount() {
 
 function verify() {
     var email = document.getElementById("email").value;
-    var email = document.getElementById("email").value;
     var birthdate = document.getElementById("birthdate").value;
     var gender = document.getElementById("gender").value;
     var affiliation = document.getElementById("affiliation").value;

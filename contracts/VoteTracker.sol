@@ -15,7 +15,7 @@ contract VoteTracker
     mapping(uint => VoteLibrary.Identity) public IdentityStore;
     uint256 public identityCount = 0;
 
-    function registerUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public returns(uint256)
+    function registerUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public payable returns(uint256)
     {
         require(checkIfIdCanExist(_email));
         identityCount++;
@@ -25,8 +25,6 @@ contract VoteTracker
 
     function verifyUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public returns(bool)
     {
-        require(!checkIfIdCanExist(_email));
-
         for(uint i=1;i<=identityCount;i++)
         {
             string memory email = IdentityStore[i].email;
