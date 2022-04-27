@@ -91,7 +91,7 @@ function verify() {
     var affiliation = document.getElementById("affiliation").value;
     var state = document.getElementById("state").value;
 
-    VoteTrackerContract.methods.verifyUser(email, birthdate, gender, affiliation, state)
+    VoteTrackerContract.methods.verifyUser(email)
         .send()
         .then(result => {
             if (result.status === true) {

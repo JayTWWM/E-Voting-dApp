@@ -15,7 +15,7 @@ contract VoteTracker
     mapping(uint => VoteLibrary.Identity) public IdentityStore;
     uint256 public identityCount = 0;
 
-    function registerUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public payable returns(uint256)
+    function registerUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public returns(uint256)
     {
         require(checkIfIdCanExist(_email));
         identityCount++;
@@ -23,21 +23,11 @@ contract VoteTracker
         emit IdentityCreate(_email, _birthdate, _gender, _affiliation, _state);
     }
 
-    function verifyUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public returns(bool)
+    function verifyUser(string memory _email) public returns(bool)
     {
-        for(uint i=1;i<=identityCount;i++)
-        {
-            string memory email = IdentityStore[i].email;
-            if(keccak256(abi.encodePacked((email))) == keccak256(abi.encodePacked((_email)))){
-                if(keccak256(abi.encodePacked((IdentityStore[i].birthdate))) == keccak256(abi.encodePacked((_birthdate))) &&
-                   keccak256(abi.encodePacked((IdentityStore[i].gender))) == keccak256(abi.encodePacked((_gender))) &&
-                   keccak256(abi.encodePacked((IdentityStore[i].affiliation))) == keccak256(abi.encodePacked((_affiliation))) &&
-                   keccak256(abi.encodePacked((IdentityStore[i].state))) == keccak256(abi.encodePacked((_state)))){
-                       return true;
-                   }
-            }
-        }
-        return false;
+        require(!checkIfIdCanExist(_email));
+
+        return true;
     }
 
     function generateVote(string memory _partyName, string memory _adhaar, string memory _constituency) public returns(uint256)
