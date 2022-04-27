@@ -86,7 +86,7 @@ function getPartyCount() {
 
 function verify() {
     var email = document.getElementById("email").value;
-    var adhar = document.getElementById("adhaarNumber").value;
+    var adhar = document.getElementById("accNumber").value;
     VoteTrackerContract.methods.registerUser(account0, adhar, email, )
         .send()
         .then(result => {
