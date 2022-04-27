@@ -17,8 +17,10 @@ library VoteLibrary
     }
     struct Identity
     {
-        string add;
-        string adhaarNumber;
         string email;
+        string birthdate;
+        string gender;
+        string affiliation;
+        string state;
     }
 }

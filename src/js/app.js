@@ -86,19 +86,38 @@ function getPartyCount() {
 
 function verify() {
     var email = document.getElementById("email").value;
-    var adhar = document.getElementById("accNumber").value;
-    VoteTrackerContract.methods.registerUser(account0, adhar, email, )
+    var email = document.getElementById("email").value;
+    var birthdate = document.getElementById("birthdate").value;
+    var gender = document.getElementById("gender").value;
+    var affiliation = document.getElementById("affiliation").value;
+    var state = document.getElementById("state").value;
+
+    VoteTrackerContract.methods.verifyUser(email, birthdate, gender, affiliation, state)
         .send()
         .then(result => {
             if (result.status === true) {
-                alert("Success");
-                console.log(result);
+                window.location.href = "./VotingPortal.html";
+            } else {
+                alert("Failure to log in. Please try again.")
             }
         });
 }
 
-function loadVote() {
-    window.location.href = "./VotingPortal.html";
+function register() {
+    var email = document.getElementById("email").value;
+    var birthdate = document.getElementById("birthdate").value;
+    var gender = document.getElementById("gender").value;
+    var affiliation = document.getElementById("affiliation").value;
+    var state = document.getElementById("state").value;
+
+    VoteTrackerContract.methods.registerUser(email, birthdate, gender, affiliation, state)
+        .send()
+        .then(result => {
+            if (result.status === true) {
+                alert("Success! Please verify to log-in.");
+                console.log(result);
+            }
+        });
 }
 
 function adminLogin() {

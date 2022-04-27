@@ -1,3 +1,3 @@
 setTimeout(function() {
-    window.location.href = './VoterVerification1.html';
+    window.location.href = './VoterVerification2.html';
 }, 5000);
