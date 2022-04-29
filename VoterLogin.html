@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Voter Registration Page</title>
+    <title>Voter Login</title>
     <link rel="stylesheet" href="./src/fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/select.css">
@@ -21,9 +21,10 @@
 <body>
     <!--Navigation-->
     <header id="header">
-        <nav class="links" style="--items: 4;">
-            <a href="./VoterVerification2.html">Voter Registration/Verification</a>
+        <nav class="links" style="--items: 5;">
+            <a href="./VoterRegistration.html">Voter Registration</a>
             <a href="./PartyRegistration.html">Party Registration</a>
+            <a href="./VoterLogin.html">Voter Login</a>
             <a href="./AdminLogin.html">Admin Portal</a>
             <a href="./Results.html">Results</a>
             <span class="line"></span>
@@ -37,7 +38,7 @@
             <div class="container1">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Voter Registration</h2>
+                        <h2 class="form-title">Voter Login</h2>
                         <form class="register-form" id="register-form" >
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -45,23 +46,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="birthdate" placeholder="MM/DD/YYYY" />
-                            </div>
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="gender" placeholder="Gender" />
-                            </div>
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="affiliation" placeholder="Political Affiliation" />
-                            </div>
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" id="state" placeholder="State" />
+                                <input type="text" id="password" placeholder="Password" />
                             </div>
                             <div class="form-group form-button">
-                                <input onclick="register()" class="form-submit" value="Register" readonly/>
-                                <input onclick="verify()" class="form-submit" value="Verify" readonly/>
+                                <input onclick="verify()" class="form-submit" value="Login" readonly/>
                             </div>
                         </form>
                     </div>

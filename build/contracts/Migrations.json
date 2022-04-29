@@ -187,7 +187,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 537,
+                        "referencedDeclaration": 620,
                         "src": "165:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -271,7 +271,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 537,
+                        "referencedDeclaration": 620,
                         "src": "220:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -653,7 +653,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 537,
+                                  "referencedDeclaration": 620,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -744,7 +744,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 537,
+                                  "referencedDeclaration": 620,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -958,12 +958,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xa040dfbC3ceeE5A92ccC9aefA83536A517f23f14",
-      "transactionHash": "0xd41f2fd368926544db0f02cb0917cf285ec86fb7ae6553dda3ab086b39328b91"
+      "address": "0x17E80BEeb588a6c0d50f18E7818C12087dcB429C",
+      "transactionHash": "0xd2a5d0b05ecf20b235ecf5ebd3bcf20722c4e46dd6f5d29d6724c81099739d82"
     }
   },
   "schemaVersion": "3.4.6",
-  "updatedAt": "2022-04-28T16:01:55.611Z",
+  "updatedAt": "2022-04-29T14:56:09.292Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
