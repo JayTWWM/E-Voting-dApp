@@ -15,18 +15,23 @@ contract VoteTracker
     mapping(uint => VoteLibrary.Identity) public IdentityStore;
     uint256 public identityCount = 0;
 
-    function registerUser(string memory _add, string memory _adhaarNumber, string memory _email) public returns(uint256)
+    function registerUser(string memory _email, string memory _birthdate, string memory _gender, string memory _affiliation, string memory _state) public returns(uint256)
     {
-        require(checkIfAccCanExist(_add));
-        require(checkIfIdCanExist(_adhaarNumber));
+        require(checkIfIdCanExist(_email));
         identityCount++;
-        IdentityStore[identityCount] = VoteLibrary.Identity(_add,_adhaarNumber,_email);
-        emit IdentityCreate(_add,_adhaarNumber,_email);
+        IdentityStore[identityCount] = VoteLibrary.Identity(_email, _birthdate, _gender, _affiliation, _state);
+        emit IdentityCreate(_email, _birthdate, _gender, _affiliation, _state);
     }
 
-    function generateVote(string memory _adder, string memory _partyName, string memory _adhaar, string memory _constituency) public returns(uint256)
+    function verifyUser(string memory _email) public returns(bool)
     {
-        require(!checkIfAccCanExist(_adder));
+        require(!checkIfIdCanExist(_email));
+
+        return true;
+    }
+
+    function generateVote(string memory _partyName, string memory _adhaar, string memory _constituency) public returns(uint256)
+    {
         require(!checkIfIdCanExist(_adhaar));
         require(checkIfCanVote(_adhaar));
         require(!checkIfCanExist(_partyName));
@@ -67,21 +72,8 @@ contract VoteTracker
     {
         for(uint i=1;i<=identityCount;i++)
         {
-            string memory idNamed = IdentityStore[i].adhaarNumber;
+            string memory idNamed = IdentityStore[i].email;
             if(keccak256(abi.encodePacked((idNamed))) == keccak256(abi.encodePacked((_namered))))
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    function checkIfAccCanExist(string memory _namerer) private returns(bool)
-    {
-        for(uint i=1;i<=identityCount;i++)
-        {
-            string memory idNamed = IdentityStore[i].add;
-            if(keccak256(abi.encodePacked((idNamed))) == keccak256(abi.encodePacked((_namerer))))
             {
                 return false;
             }
@@ -125,7 +117,7 @@ contract VoteTracker
         return (PartyStore[_id].voteCount,PartyStore[_id].name);
     }
 
-    event IdentityCreate(string add, string adhaarNumber, string email);
+    event IdentityCreate(string email, string birthdate, string gender, string affiliation, string state);
     event PartyCreate(string name, uint voteCount);
     event VoteGenerate(uint voteCount, uint time, string partyName, string adhaar, string constituency);
 }

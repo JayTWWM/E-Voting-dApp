@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/select.css">
+    <link rel="stylesheet" href="./src/css/style1.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js" charset="utf-8"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -18,36 +20,34 @@
 
 </head>
 
-<body style="background-color: #993CF3;">
-    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <div id="google_translate_element"></div>
-
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en'
-            }, 'google_translate_element');
-        }
-    </script>
+<body style="background-color: #f5c242;">
+    <header id="header">
+        <nav class="links" style="--items: 4;">
+            <a href="./VoterVerification2.html">Voter Registration/Verification</a>
+            <a href="./PartyRegistration.html">Party Registration</a>
+            <a href="./AdminLogin.html">Admin Portal</a>
+            <a href="./Results.html">Results</a>
+            <span class="line"></span>
+        </nav>
+    </header>
+    <header id="header-blankspace" style="height:20vh;">
+        <div></div>
+    </header>
     <div class="main">
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Admin Login</h2>
-                        <form class="register-form" id="register-form">
+                        <h2 class="form-title" style="margin:auto; width:70%;margin-left:220px;margin-top:50px;">Admin Login</h2>
+                        <form class="register-form" id="register-form" style="margin:auto; width:70%;margin-left:220px;margin-top:50px;">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="password" id="password" placeholder="Enter the secret password / गुप्त पासवर्ड दर्ज करें" />
+                                <input type="password" id="password" placeholder="Enter the secret password" />
                             </div>
                             <div class="form-group form-button">
-                                <input onclick="adminLogin()" class="form-submit" value="Login / लॉग इन करें" readonly/>
+                                <input onclick="adminLogin()" class="form-submit" value="Login" readonly/>
                             </div>
                         </form>
-                    </div>
-                    <div>
-                        <figure><img src="./src/images/ashok.png" width="250" alt="sign up image"></figure>
                     </div>
                 </div>
             </div>
