@@ -45,14 +45,14 @@ function generateNewVote() {
 
 function generateVote() {
     var partyNamed = document.getElementById("partyNamed").value;
-    var adhaar = document.getElementById("adhaarNumber").value;
-    VoteTrackerContract.methods.generateVote(account0, partyNamed, adhaar, "Mumbai")
+    var email = document.getElementById("email").value;
+    VoteTrackerContract.methods.generateVote(partyNamed, email, "USA")
         .send()
         .then(result => {
             if (result.status === true) {
                 alert("Success");
                 console.log(result);
-                window.location.href = "./VoterVerification1.html";
+                window.location.href = "./VoterLogin.html";
             }
         });
 }
@@ -86,10 +86,7 @@ function getPartyCount() {
 
 function verify() {
     var email = document.getElementById("email").value;
-    var birthdate = document.getElementById("birthdate").value;
-    var gender = document.getElementById("gender").value;
-    var affiliation = document.getElementById("affiliation").value;
-    var state = document.getElementById("state").value;
+    var password = document.getElementById("password").value;
 
     VoteTrackerContract.methods.verifyUser(email)
         .send()

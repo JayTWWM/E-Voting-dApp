@@ -30,16 +30,16 @@ contract VoteTracker
         return true;
     }
 
-    function generateVote(string memory _partyName, string memory _adhaar, string memory _constituency) public returns(uint256)
+    function generateVote(string memory _partyName, string memory email, string memory _constituency) public returns(uint256)
     {
-        require(!checkIfIdCanExist(_adhaar));
-        require(checkIfCanVote(_adhaar));
+        require(!checkIfIdCanExist(email));
+        require(checkIfCanVote(email));
         require(!checkIfCanExist(_partyName));
         voterCount++;
-        VoteStore[voterCount] = VoteLibrary.Vote(voterCount, block.timestamp, _partyName, _adhaar, _constituency);
+        VoteStore[voterCount] = VoteLibrary.Vote(voterCount, block.timestamp, _partyName, email, _constituency);
         uint partyIndex = getParty(_partyName);
         PartyStore[partyIndex].voteCount++;
-        emit VoteGenerate(voterCount, block.timestamp, _partyName, _adhaar, _constituency);
+        emit VoteGenerate(voterCount, block.timestamp, _partyName, email, _constituency);
     }
     
     function createParty(string memory _name) public returns(uint256)
