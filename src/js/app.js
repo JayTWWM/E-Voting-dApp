@@ -86,10 +86,7 @@ function getPartyCount() {
 
 function verify() {
     var email = document.getElementById("email").value;
-    var birthdate = document.getElementById("birthdate").value;
-    var gender = document.getElementById("gender").value;
-    var affiliation = document.getElementById("affiliation").value;
-    var state = document.getElementById("state").value;
+    var password = document.getElementById("password").value;
 
     VoteTrackerContract.methods.verifyUser(email)
         .send()

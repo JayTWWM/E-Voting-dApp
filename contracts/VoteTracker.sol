@@ -23,6 +23,13 @@ contract VoteTracker
         emit IdentityCreate(_email, _birthdate, _gender, _affiliation, _state);
     }
 
+    function verifyUser(string memory _email) public returns(bool)
+    {
+        require(!checkIfIdCanExist(_email));
+
+        return true;
+    }
+
     function generateVote(string memory _partyName, string memory _adhaar, string memory _constituency) public returns(uint256)
     {
         require(!checkIfIdCanExist(_adhaar));
