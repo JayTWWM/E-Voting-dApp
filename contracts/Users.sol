@@ -1,5 +1,10 @@
 pragma solidity >=0.4.21 <0.7.0;
 
+// Facilitates registration of new users with an email and password.
+// Stores the password as a secured byte hash.
+// Allows for login verification by providing an email and password to check
+// against the stored user database on the blockchain.
+
 contract Users
 {
     struct User {
@@ -13,7 +18,7 @@ contract Users
 
     function register(string memory email, string memory password) public returns (bool) {
         // Check if user is already registered
-        if (users[email].registered == true) {
+        if (exists(email)) {
             return false;
         }
 
@@ -31,5 +36,9 @@ contract Users
         } else {
             return false;
         }
+    }
+
+    function exists(string memory email) public view returns (bool) {
+        return users[email].registered;
     }
 }
