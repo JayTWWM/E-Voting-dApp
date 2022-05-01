@@ -117,19 +117,17 @@ function register() {
 }
 
 function adminLogin() {
-    var key;
-    VoteTrackerContract.methods.getAdminKey()
-        .call((error, response) => {
-            if (error) {
-                console.log(error);
-            } else {
-                key = response;
-                var pass = document.getElementById("password").value;
-                if (pass == key) {
-                    window.location.href = "./PartyRegistration.html";
-                } else {
-                    alert("Wrong Key");
-                }
-            }
-        });
+    var key = document.getElementById("password").value;
+
+    VoteTrackerContract.methods.verifyAdminKey(key)
+    .send()
+    .then(result => {
+        if (result.status === true) {
+            window.location.href = "./PartyRegistration.html";
+        } else {
+            alert("Incorrect admin key.");
+        }
+    }).catch(err => {
+        alert("Incorrect admin key.");
+    });
 }

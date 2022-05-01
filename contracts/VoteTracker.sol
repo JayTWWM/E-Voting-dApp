@@ -4,7 +4,7 @@ import "./VoteLibrary.sol";
 
 contract VoteTracker
 {
-    string public secret = "123456";
+    bytes32 adminKey = 0xc888c9ce9e098d5864d3ded6ebcc140a12142263bace3a23a36f9905f12bd64a;
 
     mapping(uint => VoteLibrary.Vote) public VoteStore;
     uint256 public voterCount = 0;
@@ -50,9 +50,11 @@ contract VoteTracker
         emit PartyCreate(_name, 0);
     }
 
-    function getAdminKey() public returns(string memory)
+    function verifyAdminKey(string memory _key) public returns(bool)
     {
-        return secret;
+        require(adminKey == keccak256(abi.encodePacked(_key)));
+        
+        return true;
     }
 
     function checkIfCanExist(string memory _namer) private returns(bool)
